@@ -3,7 +3,7 @@ const cors = require("cors");
 const os = require("os");
 
 const app = express();
-// const PORT = 5050;
+const PORT = 4000;
 
 // Get local IP address
 const getLocalIP = () => {
@@ -48,6 +48,6 @@ app.get("/payment-failure", (req, res) => {
 });
 
 // Start server
-app.listen(() => {
-  console.log(`Server running on https://${getLocalIP()}`);
+app.listen(PORT, () => {
+  console.log(`Server running on https://${getLocalIP()}:${PORT}`);
 });
